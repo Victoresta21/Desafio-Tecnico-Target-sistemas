@@ -30,3 +30,9 @@ function isFibonacci(num) {
 
 console.log(isFibonacci(numero_exemplo1));
 console.log(isFibonacci(numero_exemplo2));
+
+/*
+Utilizando os numeiro 21 e 22 como exemplo, retorna:
+O número 21 pertence à sequência de Fibonacci.
+O número 22 NÃO pertence à sequência de Fibonacci.
+*/
