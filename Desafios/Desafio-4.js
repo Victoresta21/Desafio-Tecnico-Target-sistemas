@@ -8,3 +8,33 @@
 
 Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.  
  */
+
+const faturamento = {
+    SP: 67836.43,
+    RJ: 36678.66,
+    MG: 29229.88,
+    ES: 27165.48,
+    Outros: 19849.53
+};
+
+const totalFaturamento = Object.values(faturamento).reduce((acc, valor) => acc + valor, 0);
+
+const percentualRepresentacao = {};
+for (const estado in faturamento) {
+    percentualRepresentacao[estado] = (faturamento[estado] / totalFaturamento * 100).toFixed(2) + '%';
+}
+
+console.log('Percentual de Representação de Cada Estado:');
+for (const estado in percentualRepresentacao) {
+    console.log(`${estado}: ${percentualRepresentacao[estado]}`);
+}
+
+
+/*
+Percentual de Representação de Cada Estado:
+SP: 37.53%
+RJ: 20.29%
+MG: 16.17%
+ES: 15.03%
+Outros: 10.98%
+*/
